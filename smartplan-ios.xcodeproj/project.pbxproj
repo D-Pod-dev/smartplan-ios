@@ -31,7 +31,7 @@
 /* Begin PBXFileReference section */
 		65ECBEC62F79773600E38377 /* smartplan-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "smartplan-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65ECC0062F797A0000E38377 /* SmartPlanCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SmartPlanCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		65ECC0072F797A0000E38377 /* SmartPlanTests.xctest */ = {isa = PBXFileReference; explicitFileType = "wrapper.cfbundle"; includeInIndex = 0; path = SmartPlanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		65ECC0072F797A0000E38377 /* SmartPlanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartPlanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -65,12 +65,12 @@
 			path = "smartplan-ios";
 			sourceTree = "<group>";
 		};
-		65ECC0082F797A0000E38377 /* SmartPlanCore */ = {
+		65ECC0082F797A0000E38377 /* smartplan-ios/Sources/SmartPlanCore */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "smartplan-ios/Sources/SmartPlanCore";
 			sourceTree = "<group>";
 		};
-		65ECC0092F797A0000E38377 /* SmartPlanCoreTests */ = {
+		65ECC0092F797A0000E38377 /* smartplan-ios/Tests/SmartPlanCoreTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "smartplan-ios/Tests/SmartPlanCoreTests";
 			sourceTree = "<group>";
@@ -109,6 +109,7 @@
 			children = (
 				65ECBEC82F79773600E38377 /* smartplan-ios */,
 				65ECBEC72F79773600E38377 /* Products */,
+				65ECBFC12F79829B00E38377 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +121,15 @@
 				65ECC0072F797A0000E38377 /* SmartPlanTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		65ECBFC12F79829B00E38377 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				65ECC0082F797A0000E38377 /* smartplan-ios/Sources/SmartPlanCore */,
+				65ECC0092F797A0000E38377 /* smartplan-ios/Tests/SmartPlanCoreTests */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,7 +170,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				65ECC0082F797A0000E38377 /* SmartPlanCore */,
+				65ECC0082F797A0000E38377 /* smartplan-ios/Sources/SmartPlanCore */,
 			);
 			name = SmartPlanCore;
 			packageProductDependencies = (
@@ -183,7 +193,7 @@
 				65ECC0052F797A0000E38377 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				65ECC0092F797A0000E38377 /* SmartPlanCoreTests */,
+				65ECC0092F797A0000E38377 /* smartplan-ios/Tests/SmartPlanCoreTests */,
 			);
 			name = SmartPlanTests;
 			packageProductDependencies = (
