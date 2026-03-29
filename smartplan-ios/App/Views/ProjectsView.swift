@@ -32,7 +32,7 @@ struct ProjectsView: View {
                         }
                     }
                     .onDelete { offsets in
-                        offsets.compactMap { store.projects[safe: $0]?.id }.forEach(store.deleteProject)
+                        offsets.map { store.projects[$0].id }.forEach(store.deleteProject)
                     }
                 }
             }

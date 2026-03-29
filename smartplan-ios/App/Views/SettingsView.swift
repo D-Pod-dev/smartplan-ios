@@ -1,4 +1,5 @@
 import SwiftUI
+import SmartPlanCore
 
 struct SettingsView: View {
     @EnvironmentObject private var store: AppStore

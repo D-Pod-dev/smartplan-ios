@@ -1,4 +1,5 @@
 import SwiftUI
+import SmartPlanCore
 
 struct FocusView: View {
     @EnvironmentObject private var store: AppStore

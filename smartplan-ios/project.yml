@@ -1,0 +1,60 @@
+name: SmartPlan
+options:
+  deploymentTarget:
+    iOS: "17.0"
+settings:
+  base:
+    SWIFT_VERSION: 6.0
+    PRODUCT_BUNDLE_IDENTIFIER: com.example.smartplan
+    GENERATE_INFOPLIST_FILE: YES
+    CURRENT_PROJECT_VERSION: 1
+    MARKETING_VERSION: 1.0
+    INFOPLIST_KEY_CFBundleDisplayName: SmartPlan
+    INFOPLIST_KEY_SUPABASE_URL: $(SUPABASE_URL)
+    INFOPLIST_KEY_SUPABASE_ANON_KEY: $(SUPABASE_ANON_KEY)
+    INFOPLIST_KEY_GROQ_BASE_URL: $(GROQ_BASE_URL)
+    INFOPLIST_KEY_GROQ_API_KEY: $(GROQ_API_KEY)
+    INFOPLIST_KEY_GROQ_MODEL: $(GROQ_MODEL)
+configs:
+  Debug: debug
+  Release: release
+configFiles:
+  Debug: Config/Debug.xcconfig
+  Release: Config/Release.xcconfig
+targets:
+  SmartPlanCore:
+    type: framework
+    platform: iOS
+    sources:
+      - Sources/SmartPlanCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.smartplan.core
+        PRODUCT_NAME: SmartPlanCore
+        DEFINES_MODULE: YES
+
+  SmartPlan:
+    type: application
+    platform: iOS
+    sources:
+      - App
+    resources:
+      - App/Resources
+    dependencies:
+      - target: SmartPlanCore
+    settings:
+      base:
+        PRODUCT_NAME: SmartPlan
+        CODE_SIGN_STYLE: Automatic
+  SmartPlanTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - Tests/SmartPlanCoreTests
+    dependencies:
+      - target: SmartPlan
+      - target: SmartPlanCore
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.example.smartplan.tests
+        GENERATE_INFOPLIST_FILE: YES

@@ -6,14 +6,73 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		65ECC0002F797A0000E38377 /* SmartPlanCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65ECC0062F797A0000E38377 /* SmartPlanCore.framework */; };
+		65ECC00C2F797A0000E38377 /* SmartPlanCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65ECC0062F797A0000E38377 /* SmartPlanCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		65ECC0012F797A0000E38377 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65ECBEBE2F79773600E38377 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65ECC00D2F797A0000E38377;
+			remoteInfo = SmartPlanCore;
+		};
+		65ECC0022F797A0000E38377 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65ECBEBE2F79773600E38377 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65ECBEC52F79773600E38377;
+			remoteInfo = "smartplan-ios";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		65ECBEC62F79773600E38377 /* smartplan-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "smartplan-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65ECC0062F797A0000E38377 /* SmartPlanCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SmartPlanCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65ECC0072F797A0000E38377 /* SmartPlanTests.xctest */ = {isa = PBXFileReference; explicitFileType = "wrapper.cfbundle"; includeInIndex = 0; path = SmartPlanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		65ECBF242F79795700E38377 /* Exceptions for "smartplan-ios" folder in "smartplan-ios" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				App/Docs/README.md,
+				App/Resources/README.md,
+				Sources/SmartPlanCore/AIActionEngine.swift,
+				Sources/SmartPlanCore/Config.swift,
+				Sources/SmartPlanCore/DateProvider.swift,
+				Sources/SmartPlanCore/InsightsEngine.swift,
+				Sources/SmartPlanCore/Models.swift,
+				Sources/SmartPlanCore/ProjectEngine.swift,
+				Sources/SmartPlanCore/SyncContracts.swift,
+				Sources/SmartPlanCore/TaskEngine.swift,
+				Tests/SmartPlanCoreTests/InsightsEngineTests.swift,
+				Tests/SmartPlanCoreTests/ProjectEngineTests.swift,
+				Tests/SmartPlanCoreTests/TaskEngineTests.swift,
+			);
+			target = 65ECBEC52F79773600E38377 /* smartplan-ios */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		65ECBEC82F79773600E38377 /* smartplan-ios */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				65ECBF242F79795700E38377 /* Exceptions for "smartplan-ios" folder in "smartplan-ios" target */,
+			);
 			path = "smartplan-ios";
+			sourceTree = "<group>";
+		};
+		65ECC0082F797A0000E38377 /* SmartPlanCore */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "smartplan-ios/Sources/SmartPlanCore";
+			sourceTree = "<group>";
+		};
+		65ECC0092F797A0000E38377 /* SmartPlanCoreTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "smartplan-ios/Tests/SmartPlanCoreTests";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +82,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65ECC0002F797A0000E38377 /* SmartPlanCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65ECC00A2F797A0000E38377 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65ECC00B2F797A0000E38377 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65ECC00C2F797A0000E38377 /* SmartPlanCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				65ECBEC62F79773600E38377 /* smartplan-ios.app */,
+				65ECC0062F797A0000E38377 /* SmartPlanCore.framework */,
+				65ECC0072F797A0000E38377 /* SmartPlanTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,6 +136,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				65ECC0032F797A0000E38377 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				65ECBEC82F79773600E38377 /* smartplan-ios */,
@@ -69,6 +147,50 @@
 			productName = "smartplan-ios";
 			productReference = 65ECBEC62F79773600E38377 /* smartplan-ios.app */;
 			productType = "com.apple.product-type.application";
+		};
+		65ECC00D2F797A0000E38377 /* SmartPlanCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65ECC0152F797A0000E38377 /* Build configuration list for PBXNativeTarget "SmartPlanCore" */;
+			buildPhases = (
+				65ECC00F2F797A0000E38377 /* Sources */,
+				65ECC00A2F797A0000E38377 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				65ECC0082F797A0000E38377 /* SmartPlanCore */,
+			);
+			name = SmartPlanCore;
+			packageProductDependencies = (
+			);
+			productName = SmartPlanCore;
+			productReference = 65ECC0062F797A0000E38377 /* SmartPlanCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		65ECC00E2F797A0000E38377 /* SmartPlanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65ECC0162F797A0000E38377 /* Build configuration list for PBXNativeTarget "SmartPlanTests" */;
+			buildPhases = (
+				65ECC0102F797A0000E38377 /* Sources */,
+				65ECC00B2F797A0000E38377 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65ECC0042F797A0000E38377 /* PBXTargetDependency */,
+				65ECC0052F797A0000E38377 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				65ECC0092F797A0000E38377 /* SmartPlanCoreTests */,
+			);
+			name = SmartPlanTests;
+			packageProductDependencies = (
+			);
+			productName = SmartPlanTests;
+			productReference = 65ECC0072F797A0000E38377 /* SmartPlanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -82,6 +204,13 @@
 				TargetAttributes = {
 					65ECBEC52F79773600E38377 = {
 						CreatedOnToolsVersion = 26.3;
+					};
+					65ECC00D2F797A0000E38377 = {
+						CreatedOnToolsVersion = 26.3;
+					};
+					65ECC00E2F797A0000E38377 = {
+						CreatedOnToolsVersion = 26.3;
+						TestTargetID = 65ECBEC52F79773600E38377;
 					};
 				};
 			};
@@ -100,6 +229,8 @@
 			projectRoot = "";
 			targets = (
 				65ECBEC52F79773600E38377 /* smartplan-ios */,
+				65ECC00D2F797A0000E38377 /* SmartPlanCore */,
+				65ECC00E2F797A0000E38377 /* SmartPlanTests */,
 			);
 		};
 /* End PBXProject section */
@@ -122,7 +253,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		65ECC00F2F797A0000E38377 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65ECC0102F797A0000E38377 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		65ECC0032F797A0000E38377 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65ECC00D2F797A0000E38377 /* SmartPlanCore */;
+			targetProxy = 65ECC0012F797A0000E38377 /* PBXContainerItemProxy */;
+		};
+		65ECC0042F797A0000E38377 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65ECBEC52F79773600E38377 /* smartplan-ios */;
+			targetProxy = 65ECC0022F797A0000E38377 /* PBXContainerItemProxy */;
+		};
+		65ECC0052F797A0000E38377 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65ECC00D2F797A0000E38377 /* SmartPlanCore */;
+			targetProxy = 65ECC0012F797A0000E38377 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		65ECBED12F79773700E38377 /* Debug */ = {
@@ -306,6 +469,74 @@
 			};
 			name = Release;
 		};
+		65ECC0112F797A0000E38377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.d-pod-dev.smartplan-ios.core";
+				PRODUCT_NAME = SmartPlanCore;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		65ECC0122F797A0000E38377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.d-pod-dev.smartplan-ios.core";
+				PRODUCT_NAME = SmartPlanCore;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		65ECC0132F797A0000E38377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.d-pod-dev.smartplan-ios.tests";
+				PRODUCT_NAME = SmartPlanTests;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/smartplan-ios.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/smartplan-ios";
+			};
+			name = Debug;
+		};
+		65ECC0142F797A0000E38377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.d-pod-dev.smartplan-ios.tests";
+				PRODUCT_NAME = SmartPlanTests;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/smartplan-ios.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/smartplan-ios";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -323,6 +554,24 @@
 			buildConfigurations = (
 				65ECBED42F79773700E38377 /* Debug */,
 				65ECBED52F79773700E38377 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65ECC0152F797A0000E38377 /* Build configuration list for PBXNativeTarget "SmartPlanCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65ECC0112F797A0000E38377 /* Debug */,
+				65ECC0122F797A0000E38377 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65ECC0162F797A0000E38377 /* Build configuration list for PBXNativeTarget "SmartPlanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65ECC0132F797A0000E38377 /* Debug */,
+				65ECC0142F797A0000E38377 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

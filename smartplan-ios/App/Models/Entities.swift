@@ -1,5 +1,6 @@
 import Foundation
 import SwiftData
+import SmartPlanCore
 
 @Model
 final class TaskEntity {

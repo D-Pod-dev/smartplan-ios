@@ -1,4 +1,5 @@
 import SwiftUI
+import SmartPlanCore
 
 struct ChatView: View {
     @EnvironmentObject private var store: AppStore
@@ -12,7 +13,7 @@ struct ChatView: View {
                         .tag(Optional(convo.id))
                 }
                 .onDelete { offsets in
-                    offsets.compactMap { store.conversations[safe: $0]?.id }.forEach(store.deleteConversation)
+                    offsets.map { store.conversations[$0].id }.forEach(store.deleteConversation)
                 }
             }
             .toolbar {
